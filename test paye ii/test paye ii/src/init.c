@@ -45,10 +45,3 @@ void USART_send(char* in, char number)
 		usart_putchar(USART_SERIAL,*(in+c));
 	}
 }
-
-
-int make_two_byte(char msB,char lsb)
-{
-	int a=msB*256+lsb;
-	return a;
-}

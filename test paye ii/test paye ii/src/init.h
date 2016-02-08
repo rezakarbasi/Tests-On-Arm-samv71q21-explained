@@ -35,7 +35,7 @@
 
 void init_Usart (void);
 void USART_send(char* in, char number);
-int make_two_byte(char msB,char lsb);
+
 
 
 
