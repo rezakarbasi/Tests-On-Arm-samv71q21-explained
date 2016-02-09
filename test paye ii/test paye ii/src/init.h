@@ -19,28 +19,6 @@
 #define MY_LED    IOPORT_CREATE_PIN(PIOA, 23)
 #define button    PIO_PA9_IDX
 
-
-
-#define USART_SERIAL                 USART1
-#define USART_SERIAL_ID              ID_USART1
-#define USART_SERIAL_ISR_HANDLER     USART1_Handler
-#define USART_SERIAL_BAUDRATE        9600
-#define USART_SERIAL_CHAR_LENGTH     US_MR_CHRL_8_BIT
-#define USART_SERIAL_PARITY          US_MR_PAR_NO
-#define USART_SERIAL_STOP_BIT        US_MR_NBSTOP_1_BIT
-
-#define USART_SERIAL_IRQ		USART1_IRQn
-
-
-
-void init_Usart (void);
-void USART_send(char* in, char number);
-
-
-
-
-
-
 #endif /* INIT_H_ */
 
 
