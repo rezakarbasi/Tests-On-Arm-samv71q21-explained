@@ -182,6 +182,10 @@ void GetNewData(uint8_t data,int side)
 					}
 				}
 			}
+			
+			// This is added by Reza
+			completed_transfer++;
+			
 			PCK_Num[side] = 0;
 		}
 	}

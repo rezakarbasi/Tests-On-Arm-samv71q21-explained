@@ -77,6 +77,9 @@ struct Robot_Data Robot_D_tmp[2][Max_Robot];
 uint8_t PCK_Num[2];
 
 
+char completed_transfer;
+
+
 void GetNewData(uint8_t data,int side);
 
 #endif /* TRANSMITTER_H_ */
