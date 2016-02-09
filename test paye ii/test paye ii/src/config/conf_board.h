@@ -1,30 +1,30 @@
 /**
  * \file
  *
- * \brief SAMV71 Xplained Ultra board configuration
+ * \brief Board configuration.
  *
- * Copyright (C) 2015 Atmel Corporation. All rights reserved.
+ * Copyright (c) 2012-2015 Atmel Corporation. All rights reserved.
  *
  * \asf_license_start
  *
  * \page License
- * 
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
- * 
+ *
  * 1. Redistributions of source code must retain the above copyright notice,
  *    this list of conditions and the following disclaimer.
- * 
+ *
  * 2. Redistributions in binary form must reproduce the above copyright notice,
  *    this list of conditions and the following disclaimer in the documentation
  *    and/or other materials provided with the distribution.
- * 
+ *
  * 3. The name of Atmel may not be used to endorse or promote products derived
  *    from this software without specific prior written permission.
- * 
+ *
  * 4. This software may only be redistributed and used in connection with an
  *    Atmel microcontroller product.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR IMPLIED
  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
@@ -38,14 +38,44 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * \asf_license_stop
+ *
  */
 /*
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 
+#ifndef CONF_BOARD_H_INCLUDED
+#define CONF_BOARD_H_INCLUDED
+
+/** Enable Com Port. */
 #define CONF_BOARD_UART_CONSOLE
 
-#ifndef CONF_BOARD_H
-#define CONF_BOARD_H
+//! [tc_define_peripheral]
+/* Use TC Peripheral 0. */
+#define TC             TC0
+#define TC_PERIPHERAL  0
+//! [tc_define_peripheral]
 
-#endif /* CONF_BOARD_H */
+//! [tc_define_ch1]
+/* Configure TC0 channel 1 as waveform output. */
+#define TC_CHANNEL_WAVEFORM 1
+#define ID_TC_WAVEFORM      ID_TC1
+#define PIN_TC_WAVEFORM     PIN_TC0_TIOA1
+#define PIN_TC_WAVEFORM_MUX PIN_TC0_TIOA1_MUX
+//! [tc_define_ch1]
+
+//! [tc_define_ch2]
+/* Configure TC0 channel 2 as capture input. */
+#define TC_CHANNEL_CAPTURE 2
+#define ID_TC_CAPTURE ID_TC2
+#define PIN_TC_CAPTURE PIN_TC0_TIOA2
+#define PIN_TC_CAPTURE_MUX PIN_TC0_TIOA2_MUX
+//! [tc_define_ch2]
+
+//! [tc_define_irq_handler]
+/* Use TC2_Handler for TC capture interrupt. */
+#define TC_Handler  TC2_Handler
+#define TC_IRQn     TC2_IRQn
+//! [tc_define_irq_handler]
+
+#endif /* CONF_BOARD_H_INCLUDED */
