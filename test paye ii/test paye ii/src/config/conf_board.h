@@ -44,6 +44,7 @@
  */
 
 #define CONF_BOARD_UART_CONSOLE
+#define CONF_BOARD_USB_PORT                                                     /*changed by me*/
 
 #ifndef CONF_BOARD_H
 #define CONF_BOARD_H
