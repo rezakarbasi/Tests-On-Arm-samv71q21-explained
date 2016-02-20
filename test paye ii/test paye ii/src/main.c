@@ -20,7 +20,7 @@ int main (void)
 	
 	board_init();
 	
-	
+	init_Usart();
 	
 	ioport_set_pin_dir(MY_LED, IOPORT_DIR_OUTPUT);
 	ioport_set_pin_level(MY_LED,0);
